@@ -46,6 +46,11 @@ class MoviesTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK: Methods
+    func loadLocalJSON(){
+        
+    }
 
     // MARK: - Table view data source
 
