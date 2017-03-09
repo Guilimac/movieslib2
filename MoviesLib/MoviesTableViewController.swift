@@ -14,6 +14,8 @@ class MoviesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = 106
+        tableView.rowHeight = UITableViewAutomaticDimension
         loadLocalJSON()
 
         // Uncomment the following line to preserve selection between presentations
@@ -48,9 +50,6 @@ class MoviesTableViewController: UITableViewController {
             }
             tableView.reloadData()
         }
-        
-        
-        
     }
 
     // MARK: - Table view data source
