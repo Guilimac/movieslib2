@@ -177,7 +177,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Azl-7R-Hdq">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Azl-7R-Hdq" customClass="MovieTableViewCell" customModule="MoviesLib" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="106"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Azl-7R-Hdq" id="Rh7-xP-6Oj">
@@ -212,6 +212,12 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <connections>
+                                    <outlet property="ivPoster" destination="3xH-gk-8EC" id="LXg-Jz-0Zj"/>
+                                    <outlet property="lbRating" destination="TUO-KL-ifV" id="nO2-cX-d0Q"/>
+                                    <outlet property="lbSummary" destination="TVp-0Z-cb0" id="eFp-qY-Lct"/>
+                                    <outlet property="lbTitle" destination="eDl-Qh-uJK" id="QxQ-Ee-PEC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

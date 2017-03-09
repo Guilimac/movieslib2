@@ -67,11 +67,12 @@ class MoviesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = dataSource[indexPath.row].title
-        cell.detailTextLabel?.text = "\(dataSource[indexPath.row].rating)"
-        cell.imageView?.image = UIImage(named: dataSource[indexPath.row].imageSmall)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MovieTableViewCell
         
+        cell.ivPoster.image = UIImage(named: dataSource[indexPath.row].imageSmall)
+        cell.lbTitle.text = dataSource[indexPath.row].title
+        cell.lbRating.text = "\(dataSource[indexPath.row].rating)"
+        cell.lbSummary.text = dataSource[indexPath.row].summary
         
         // Configure the cell...
 
