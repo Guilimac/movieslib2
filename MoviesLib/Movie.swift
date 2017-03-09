@@ -14,6 +14,9 @@ class Movie {
     var duration: String
     var imageName: String
     var categories:[String]!
+    var imageSmall:String{
+        return imageName + "-small.jpg"
+    }
     
     init(title: String,rating:Double,summary:String,duration:String,imageName:String) {
         self.title = title

@@ -10,30 +10,11 @@ import UIKit
 
 class MoviesTableViewController: UITableViewController {
     
-    var dataSource : [(String? , Double?)] = [
-        ("E o vento levou", 10.0),
-        ("Titanic",9.0),
-        ("Matrix",10.0),
-        ("Homem-Aranha",8.5),
-        ("Superman",9.5),
-        ("O Cubo",10.0),
-        (nil,10.0),
-        (nil,8.5),
-        ("Superman",9.5),
-        ("O Cubo",10.0),
-        ("O Cubo",10.0),
-        ("Homem-Aranha",8.5),
-        ("Superman",9.5),
-        (nil,10.0),
-        ("O Cubo",10.0),
-        ("O Cubo",nil),
-        ("O Cubo",nil),
-        ("O Cubo",nil),
-        ("O Cubo",10.0)
-    ]
+    var dataSource: [Movie] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadLocalJSON()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -62,7 +43,10 @@ class MoviesTableViewController: UITableViewController {
                 let movie = Movie(title: title, rating: rating, summary: summary, duration: duration, imageName: imageName)
                 movie.categories = item["categories"] as! [String]
                 
+                dataSource.append(movie)
+                
             }
+            tableView.reloadData()
         }
         
         
@@ -84,14 +68,10 @@ class MoviesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.detailTextLabel?.text = ""
-        cell.textLabel?.text = ""
-        if let title = dataSource[indexPath.row].0{
-            cell.textLabel?.text = title
-        }
-        if let rating = dataSource[indexPath.row].1 {
-            cell.detailTextLabel?.text = "\(rating)"
-        }
+        cell.textLabel?.text = dataSource[indexPath.row].title
+        cell.detailTextLabel?.text = "\(dataSource[indexPath.row].rating)"
+        cell.imageView?.image = UIImage(named: dataSource[indexPath.row].imageSmall)
+        
         
         // Configure the cell...
 
