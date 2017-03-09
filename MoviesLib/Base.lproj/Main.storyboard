@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MovieViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -232,6 +232,7 @@
                                     <outlet property="lbRating" destination="TUO-KL-ifV" id="nO2-cX-d0Q"/>
                                     <outlet property="lbSummary" destination="TVp-0Z-cb0" id="eFp-qY-Lct"/>
                                     <outlet property="lbTitle" destination="eDl-Qh-uJK" id="QxQ-Ee-PEC"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Ose-Mu-2vo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

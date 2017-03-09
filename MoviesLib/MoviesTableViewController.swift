@@ -78,6 +78,13 @@ class MoviesTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! MovieViewController
+        
+        vc.movie = dataSource[tableView.indexPathForSelectedRow!.row]
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
