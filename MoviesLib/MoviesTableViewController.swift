@@ -49,6 +49,23 @@ class MoviesTableViewController: UITableViewController {
     
     //MARK: Methods
     func loadLocalJSON(){
+        if let jsonURL = Bundle.main.url(forResource: "movies", withExtension: "json"){
+            let data: Data = try! Data(contentsOf: jsonURL)
+            
+            let json = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()) as! [[String: Any]]
+            for item in json {
+                let title = item["title"] as! String
+                let duration = item["duration"] as! String
+                let summary = item["summary"] as! String
+                let imageName = item["image_name"] as! String
+                let rating = item["rating"] as! Double
+                let movie = Movie(title: title, rating: rating, summary: summary, duration: duration, imageName: imageName)
+                movie.categories = item["categories"] as! [String]
+                
+            }
+        }
+        
+        
         
     }
 
