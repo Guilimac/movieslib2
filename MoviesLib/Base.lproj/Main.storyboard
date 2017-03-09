@@ -213,9 +213,10 @@
                                     <constraints>
                                         <constraint firstItem="3xH-gk-8EC" firstAttribute="leading" secondItem="Rh7-xP-6Oj" secondAttribute="leading" constant="12" id="4zR-Nd-hmm"/>
                                         <constraint firstAttribute="trailing" secondItem="TUO-KL-ifV" secondAttribute="trailing" constant="10" id="6qW-Es-eGQ"/>
-                                        <constraint firstItem="TUO-KL-ifV" firstAttribute="top" secondItem="TVp-0Z-cb0" secondAttribute="bottom" constant="29" id="A7g-07-Ild"/>
+                                        <constraint firstItem="TUO-KL-ifV" firstAttribute="top" secondItem="TVp-0Z-cb0" secondAttribute="bottom" priority="250" constant="8" id="A7g-07-Ild"/>
                                         <constraint firstItem="3xH-gk-8EC" firstAttribute="top" secondItem="Rh7-xP-6Oj" secondAttribute="top" constant="6" id="CKZ-DO-8kl"/>
                                         <constraint firstItem="eDl-Qh-uJK" firstAttribute="top" secondItem="Rh7-xP-6Oj" secondAttribute="top" constant="6" id="Cie-xJ-uow"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3xH-gk-8EC" secondAttribute="bottom" constant="11" id="P8Z-JM-S6K"/>
                                         <constraint firstAttribute="trailing" secondItem="TVp-0Z-cb0" secondAttribute="trailing" constant="10" id="ZiO-Ao-iz9"/>
                                         <constraint firstAttribute="trailing" secondItem="eDl-Qh-uJK" secondAttribute="trailing" constant="10" id="dPc-hz-eZg"/>
                                         <constraint firstItem="eDl-Qh-uJK" firstAttribute="leading" secondItem="3xH-gk-8EC" secondAttribute="trailing" constant="14" id="f8z-4X-zMk"/>
