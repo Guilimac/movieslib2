@@ -17,6 +17,14 @@ class MoviesTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 106
         tableView.rowHeight = UITableViewAutomaticDimension
         loadLocalJSON()
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 22))
+        label.text = "Sem filmes"
+        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        label.textAlignment = .center
+        
+        tableView.backgroundView = label
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
